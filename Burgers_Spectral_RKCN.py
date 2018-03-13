@@ -60,7 +60,7 @@ def spectra_calculation(array_hat):
     global nx
     array_new = np.copy(array_hat / float(nx))
     # Energy Spectrum
-    espec = 0.5 * np.absolute(array_new)
+    espec = 0.5 * np.absolute(array_new)**2
     # Angle Averaging
     eplot = np.zeros(nx / 2, dtype='double')
     for i in range(1, nx / 2):
